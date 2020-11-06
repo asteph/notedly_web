@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
@@ -44,12 +44,12 @@ const NavList = styled.ul`
   }
 
   span {
-    margin-right: .25em;
+    margin-right: 0.25em;
   }
 `;
 
 const Navigation = () => {
-  return(
+  return (
     <Nav>
       <NavList>
         <li>
@@ -72,7 +72,7 @@ const Navigation = () => {
         </li>
       </NavList>
     </Nav>
-  )
-}
+  );
+};
 
 export default Navigation;
