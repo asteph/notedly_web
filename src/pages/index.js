@@ -7,12 +7,14 @@ import Home from './home';
 import MyNotes from './mynotes';
 import Favorites from './favorites';
 import NotePage from './note';
+import SignUp from './signup';
 
 const Pages = () => {
   return (
     <Router>
       <Layout>
         <Route exact path="/" component={Home} />
+        <Route path="/signup" component={SignUp} />
         <Route path="/mynotes" component={MyNotes} />
         <Route path="/favorites" component={Favorites} />
         <Route path="/note/:id" component={NotePage} />
