@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useQuery, gql } from '@apollo/client';
 
 import Button from '../components/Button';
@@ -26,6 +26,10 @@ const GET_NOTES = gql`
 `;
 
 const Home = () => {
+  useEffect(() => {
+    // update the document title
+    document.title = 'Notedly';
+  });
   // query hook
   const { data, loading, error, fetchMore } = useQuery(GET_NOTES);
 
