@@ -70,6 +70,12 @@ const Navigation = () => {
           </span>
           <Link to="/favorites">Favorites</Link>
         </li>
+        <li>
+          <span area-hidden="true" role="img">
+            🖋
+          </span>
+          <Link to="/new">New</Link>
+        </li>
       </NavList>
     </Nav>
   );
