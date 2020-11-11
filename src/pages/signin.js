@@ -19,12 +19,15 @@ const SignIn = props => {
   const client = useApolloClient();
   const [signIn, { loading, error }] = useMutation(SIGNIN_USER, {
     onCompleted: data => {
+      if (error){
+        return;
+      }
       // store the JWT in localStorage
       localStorage.setItem('token', data.signIn);
       // update the local cache
       client.writeData({ data: { isLoggedIn: true } });
-      // redirect the user to location stored when redirecting them in index.js
-      props.history.push(props.location.state.from.pathname);
+      // redirect the user to the homepage
+      props.history.push('/');
     }
   });
 
