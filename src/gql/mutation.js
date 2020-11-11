@@ -1,5 +1,11 @@
 import { gql } from '@apollo/client';
 
+const DELETE_NOTE = gql`
+  mutation deleteNote($id: ID!) {
+    deleteNote(id: $id)
+  }
+`;
+
 const EDIT_NOTE = gql`
   mutation updateNote($id: ID!, $content: String!) {
     updateNote(id: $id, content: $content) {
@@ -19,4 +25,13 @@ const EDIT_NOTE = gql`
   }
 `;
 
-export { EDIT_NOTE };
+const TOGGLE_FAVORITE = gql`
+  mutation toggleFavorite($id: ID!) {
+    toggleFavorite(id: $id){
+      id
+      favoriteCount
+    }
+  }
+`;
+
+export { DELETE_NOTE, EDIT_NOTE, TOGGLE_FAVORITE };

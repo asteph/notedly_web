@@ -72,7 +72,7 @@ const Navigation = () => {
         </li>
         <li>
           <span area-hidden="true" role="img">
-            🖋
+            ➕
           </span>
           <Link to="/new">New</Link>
         </li>
